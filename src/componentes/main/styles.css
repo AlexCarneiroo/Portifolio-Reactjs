@@ -1,0 +1,40 @@
+.swiper-styles{
+    padding: 30px 0;
+}
+.git{
+    color: rgb(230, 74, 25);
+}
+.java{
+    color: rgb(255, 255, 0);
+}
+.html{
+    color:rgb(245, 124, 0);
+}
+.css{
+   color: rgb(25, 118, 210);
+}
+.type{
+    color: #1A237E;
+}
+
+.react{
+    color: #64B5F6;
+}
+.taiCSS{
+    color: #0277BD;
+}
+@media (max-width:400px){
+    .imagi{
+        width: 250px;
+    }
+}
+
+.img1{
+    width: 60%;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.incone{
+    margin-left: 10px;
+}

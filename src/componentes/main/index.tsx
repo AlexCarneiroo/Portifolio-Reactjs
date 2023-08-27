@@ -1,10 +1,7 @@
 import * as C from '../main/style'
 import { Link, Element } from 'react-scroll';
-import {FaChevronUp , FaShare} from 'react-icons/fa'
-
+import {FaChevronUp , FaShare , FaAngleDown} from 'react-icons/fa'
 // Carrosel
-import {register } from 'swiper/element/bundle'
-register()
 
 import 'swiper/css';
 import 'swiper/css/navigation'
@@ -13,6 +10,8 @@ import 'swiper/css/scrollbar'
 import './styles.css'
 
 import { Swiper , SwiperSlide } from 'swiper/react'
+
+
 
 
 // Tecnologia
@@ -40,10 +39,19 @@ import cert6 from '../../logos e imgs/certificados/certificado_5163342.jpg'
 //Portifolios
 
 import img1 from '../../logos e imgs/jogo da velha.png'
+import img2Imc from '../../logos e imgs/imgs de projetos/IMG1.png'
+import imageProgetojogo from '../../logos e imgs/imgs de projetos/screencapture-127-0-0-1-5500-index-html-2023-08-22-18_59_41.png'
+import cronometro from '../../logos e imgs/imgs de projetos/cronometro.png'
 
 import { useEffect , useState } from 'react';
 
 export const Main = ()=>{
+
+    const [verMais , setVermais] = useState(false)
+
+    const handlClick =()=>{
+        setVermais(true)
+    }
 
 
     const [isScrrol, setScrool] = useState(false)
@@ -102,27 +110,31 @@ export const Main = ()=>{
             </C.redes>
 
             <C.Container>
-                <C.contraContainer>
-                    <Element name="parte">
-                        <C.h1>Sobre min</C.h1>
-                        <hr />
-                        <C.divisao>
-                            <C.sobreLeft>
-                                <C.img src={useimg} alt='' width={350}/>
-                            </C.sobreLeft>
-                            <C.sobreRight>
-                                <C.h2>Pessoal</C.h2>
-                                <C.detalhes>Sou uma Pessoa muito Dedicada No que Faço ,  Tenho o Abito de Ter uma Rotina Fazer sempre Em ordem, Gosto muito de Ler Livros E Estudar passo a metade do meu tempo Estudando!!!</C.detalhes>
-                                <br />
-                                <br />
-                                <C.h2>Profissional</C.h2>
-                                <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Python, e em liguagem de leituras HTML5 e CSS e alguns framework como ReactJs Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
-                            </C.sobreRight>
-                        </C.divisao>
-                    </Element>
-                </C.contraContainer>
+
+                    <C.contraContainer>
+                        <Element name="parte">
+                            <C.h1>Sobre min</C.h1>
+                            <hr />
+                            <C.divisao>
+                                <C.sobreLeft>
+                                    <C.img src={useimg} alt='' width={350}/>
+                                </C.sobreLeft>
+                                <C.sobreRight>
+                                    <C.h2>Pessoal</C.h2>
+                                    <C.detalhes>Sou uma Pessoa muito Dedicada No que Faço ,  Tenho o Abito de Ter uma Rotina Fazer sempre Em ordem, Gosto muito de Ler Livros E Estudar passo a metade do meu tempo Estudando!!!</C.detalhes>
+                                    <br />
+                                    <br />
+                                    <C.h2>Profissional</C.h2>
+                                    <C.detalhes>Tenho Conhecimento Avançado na Lingua JavaScript e Python, e em liguagem de leituras HTML5 e CSS e alguns framework como ReactJs Tenho conhecimento em TypeScript e outras Bibliotecas , Cursei na empresa B7web e na Danki Code...</C.detalhes>
+                                </C.sobreRight>
+                            </C.divisao>
+                        </Element>
+                    </C.contraContainer>
             </C.Container>
 
+            
+
+            <Element name='certificado'>
             <C.certificados>
                 <C.h1>Certificaçoes</C.h1>
                 <hr />
@@ -192,11 +204,16 @@ export const Main = ()=>{
                     </Swiper>
                 </C.carrosel>
             </C.certificados>
-
+                
+            </Element>
             <C.Container>
+              
                 <C.subiContainer>
-                    <C.h1>Portifolios</C.h1>
+                    <Element name='portifolio'>
+                        <C.h1>Portifolios</C.h1>
+                    </Element>
                     <hr />
+                     
                     <C.portifolios>
                         <C.porti>
                             <img src={img1} className='img1' alt="" />
@@ -210,6 +227,7 @@ export const Main = ()=>{
                                 <C.texUse>
                                     <img src={react} alt="" width={50} />
                                     <img src={ty} alt="" width={50} />
+                                    <img src={javaScript} alt="" width={50} />
                                 </C.texUse>
 
                                 <C.irProject className='btnEfeito'>
@@ -221,6 +239,111 @@ export const Main = ()=>{
                             </C.optios>
                         </C.porti>
                     </C.portifolios>
+
+                    <hr />
+                    <C.portifolios>
+                        <C.porti>
+                            
+                            <C.optios>
+                                <C.titulo>Calculadora de IMC</C.titulo>
+                                <C.spp>
+
+                                    Por favor, insira seu peso em quilogramas: 70
+                                    Agora, insira sua altura em metros: 1.75
+                                    Calculando...
+
+                                    Seu IMC é: 22.86
+
+                                    De acordo com o IMC, você está na faixa de peso considerada saudável.
+
+                                    Lembrando que o IMC é uma medida simples, mas não leva em consideração outros fatores como a composição corporal e a distribuição de gordura. Consulte um profissional de saúde para uma avaliação mais completa.
+
+                                </C.spp>
+
+                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.texUse>
+                                    <img src={react} alt="" width={50} />
+                                    <img src={ty} alt="" width={50} />
+                                    <img src={javaScript} alt="" width={50}/>
+                                </C.texUse>
+
+                                <C.irProject className='btnEfeito'>
+                                    Ver Projeto
+                                    
+                                    <FaShare className='incone'/>
+                                </C.irProject>
+
+                            </C.optios>
+                                <img  src={img2Imc} className='img1' alt="" />
+                        </C.porti>
+                    </C.portifolios>
+                    <hr />
+                    <C.portifolios>
+                        <C.porti>
+                            <img  src={imageProgetojogo} className='img1' alt="" />
+
+                            <C.optios>
+                                <C.titulo>Pedra Papel Tesoura JS</C.titulo>
+                                <C.spp>
+                                    Um Joguinho Classico De Pedra Papel e Tesoura Simples Mais Com Muita Logica!!!
+                                    <br />
+                                    Feito com HTML e CSS E JAVASCRIPT!!!
+                                </C.spp>
+
+                                    <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.texUse>
+                                    <img src={html} alt="" width={50} />
+                                    <img src={javaScript} alt="" width={50} />
+                                </C.texUse>
+
+                                <C.irProject className='btnEfeito'>
+                                    Ver Projeto
+                                    
+                                    <FaShare className='incone'/>
+                                </C.irProject>
+
+                            </C.optios>
+                        </C.porti>
+                    </C.portifolios>
+                    
+                    {!verMais && 
+                        <Link to="centra">
+                            <C.vermais onClick={handlClick}>Ver Mais  <FaAngleDown/></C.vermais>
+                        </Link>
+                    }
+                    
+                    
+                    {verMais &&
+                    <>
+                    <hr />                 
+                    <C.portifolios>
+                        <C.porti>
+                            <C.optios>
+                                <C.titulo>Cronometro Moderno</C.titulo>
+                                <C.spp>
+                                    Esse é um projeto de cronometro moderno e simples de usar bom para fazer um Pomodoro ou algo do tipo
+                                    <br />
+                                    Feito com HTML e CSS E JAVASCRIPT!!!
+                                </C.spp>
+                                        <C.titulo>Tecnologias Utilizadas</C.titulo>
+                                <C.texUse>
+                                    <img src={html} alt="" width={50} />
+                                    <img src={javaScript} alt="" width={50} />
+                                </C.texUse>
+
+                                <C.linkProjeto href="https://cronometroomoderno.netlify.app/" target='_black'>
+                                    <C.irProject className='btnEfeito'>
+                                        Ver Projeto 
+                                        <FaShare className='incone'/>
+                                    </C.irProject>
+                                </C.linkProjeto>
+
+                            </C.optios>
+                            <img  src={cronometro} className='img1' alt="" />
+                        </C.porti>
+                    </C.portifolios>                    
+                </>
+                }
                 </C.subiContainer>
             </C.Container>
         </C.main>

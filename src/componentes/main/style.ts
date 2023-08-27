@@ -34,6 +34,10 @@ export const Container = styled.div`
 export const HomeLeft = styled.div`
     width: 100%;
     padding:40px;
+
+    @media (max-width:850px) {
+        padding: 0 40px;
+    }
 `;
 
 export const title = styled.h1`
@@ -91,7 +95,7 @@ export const img= styled.img`
 //Tecnologias
 
 export const redes = styled.div`
-    padding:10px;
+    display: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -244,6 +248,7 @@ export const portifolios = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    transition: all .3s ease-in-out;
 `;
 
 export const porti = styled.div`
@@ -251,7 +256,7 @@ export const porti = styled.div`
     display: flex;
     align-items: flex;
     border-radius: 5px;
-    margin: 30px 0;
+    margin: 45px 0;
 
     @media (max-width:850px) {
         flex-direction: column;
@@ -271,7 +276,7 @@ export const optios = styled.div`
 `;
 
 export const titulo = styled.h1`
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #212121;
 `;
 export const spp = styled.span`
@@ -286,7 +291,7 @@ export const spp = styled.span`
 `;
 
 export const texUse = styled.div`
-    margin: 10px 0;
+    margin: 15px 0 20px 0;
     display: flex;
     @media (max-width:850px) {
         align-items:center;
@@ -326,3 +331,36 @@ export const irProject = styled.div`
         color: white;
     }
 `;
+
+
+export const contImage = styled.div`
+    width: 60%;
+    display: flex;
+    position: relative;
+
+`;
+
+
+export const vermais = styled.div`
+    margin: 0 auto;
+    padding: 5px 20px;
+    font-size: .9rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+    color: #283593;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        color: #5C6BC0;
+    }
+`;
+
+export const linkProjeto = styled.a`
+    text-decoration: none;
+
+`

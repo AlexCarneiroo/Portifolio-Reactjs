@@ -31,10 +31,19 @@
 
 .img1{
     width: 60%;
+    height:auto;
+    max-height: 350px;
     flex: 1;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0 , .1);
+
+    @media (max-width:850px) {
+        width: 100%;
+    }
 }
 
 .incone{
     margin-left: 10px;
 }
+
+

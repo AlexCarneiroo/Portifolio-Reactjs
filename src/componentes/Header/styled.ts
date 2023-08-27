@@ -133,6 +133,7 @@ export const menuRespomRedes = styled.div`
     top: 50px;
     font-family: 'Montserrat';
 
+
     @font-face {
         font-family: 'Montserrat' ;
         src: url(${Mont});
@@ -148,11 +149,17 @@ export const b = styled.a`
     font-weight: bold;
     cursor: pointer;
     padding: 5px;
+
+
     &:hover{
         text-decoration: underline;
     }
 `;
 
+
+export const Link = styled.a`
+
+`;
 
 
 

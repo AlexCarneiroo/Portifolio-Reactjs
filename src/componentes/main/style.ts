@@ -66,7 +66,7 @@ export const p = styled.p`
 export const bold = styled.span`
     font-weight: bold;
 `;
-export const link = styled.a`
+export const link = styled.span`
     font-weight: bold;
     color:#263238 ;
 

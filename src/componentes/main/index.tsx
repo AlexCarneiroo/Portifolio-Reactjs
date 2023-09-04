@@ -2,7 +2,7 @@ import * as C from '../main/style'
 import { Link, Element } from 'react-scroll';
 import {FaChevronUp , FaShare , FaAngleDown} from 'react-icons/fa'
 // Carrosel
-
+import React from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -10,6 +10,7 @@ import 'swiper/css/scrollbar'
 import './styles.css'
 
 import { Swiper , SwiperSlide } from 'swiper/react'
+import { Pagination , Navigation } from 'swiper/modules';
 
 
 
@@ -142,8 +143,9 @@ export const Main = ()=>{
                     <Swiper
                         grabCursor
                         slidesPerView={1}
-                        pagination={{clickable: true}}
+                        pagination={{dynamicBullets: true,}}
                         navigation
+                        modules={[Pagination , Navigation]}
                         className='swiper-styles'
                     >
                         <SwiperSlide>

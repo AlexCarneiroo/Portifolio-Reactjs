@@ -66,7 +66,7 @@ export const menu = styled.div`
     }
 `;
 
-export const a = styled.a`
+export const a = styled.span`
     margin: 0px 5px ;
     color: #455A64;
     padding: 5px 20px;
@@ -144,7 +144,7 @@ export const menuRespomRedes = styled.div`
     }
     
 `;
-export const b = styled.a`
+export const b = styled.span`
     color: #fff;
     font-weight: bold;
     cursor: pointer;

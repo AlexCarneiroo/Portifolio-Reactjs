@@ -1,9 +1,9 @@
-import { MainRoutes } from "./Routes/main"
+import { Home } from "./pages/Home"
 
 const App = ()=>{
   return(
     <div>
-      <MainRoutes/>
+      <Home/>
     </div>
   )
 }

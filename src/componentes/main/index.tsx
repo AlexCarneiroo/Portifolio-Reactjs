@@ -309,9 +309,8 @@ export const Main = ()=>{
                     </C.portifolios>
                     
                     {!verMais && 
-                        <Link to="centra">
-                            <C.vermais onClick={handlClick}>Ver Mais  <FaAngleDown/></C.vermais>
-                        </Link>
+                    
+                        <C.vermais onClick={handlClick}>Ver Mais  <FaAngleDown/></C.vermais>
                     }
                     
                     

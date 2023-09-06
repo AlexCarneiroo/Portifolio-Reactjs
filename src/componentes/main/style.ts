@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Mont from '../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf'
+import Title from '../../fonts/Caveat-VariableFont_wght.ttf'
 
 export const main = styled.div`
     width: 100%;
@@ -129,7 +130,7 @@ export const h1 = styled.h1`
 
     @font-face {
         font-family: 'Caveat' ;
-        src: url(${title});
+        src: url(${Title});
     }
 
     &:before{
